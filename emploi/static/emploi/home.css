@@ -1,0 +1,183 @@
+h1 {
+    color: #ca1b1b;
+    font-size: 50px;
+    font-style: oblique;
+  }
+
+
+.title {
+    background-color: rgb(232, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 3.5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Rubrique {
+    background-image: url("https://img.freepik.com/photos-premium/jeune-homme-affaires-utilisation-tablette-numerique-dans-bureau_52137-29336.jpg?w=740");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+.access {
+    display: block;
+    justify-content: space-between;
+    position: absolute;
+    right: 0%;
+    
+}
+
+.connect {
+    display: flex;
+    justify-content: space-between;
+}
+
+.disconnect {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset a{
+    color: #605656;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    
+    /* text-decoration: none; */
+}
+
+
+.connection a{
+    color: #605656;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 1.5rem;
+    display: flex;
+    margin-top: 3rem;
+    
+}
+
+.inscription a{
+    color: #605656;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+}
+
+
+.offres {
+    background-color: #605656;
+    width: 60%;
+    padding: 5%;
+    margin: auto;
+}
+
+.see-button {
+    background-color: blanchedalmond;
+    color: #0d0d0d;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.logout-buttun {
+    background-color: rgb(237, 65, 17);
+    color: #0d0d0d;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.entreprise {
+    color: blanchedalmond;
+    /* font-size: 50px; */
+    font-style: italic;
+}
+
+.candidat {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(197, 185, 185);
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    padding: auto;
+    
+}
+
+.candidat h3 {
+    color: rgb(6, 6, 6);
+    font-style: italic
+}
+
+.recruteur {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(197, 185, 185);
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    
+}
+
+.recruteur a {
+    text-decoration: none;
+}
+
+.recruteur h3 {
+    color: rgb(6, 6, 6);
+    font-style: italic
+}
+
+.user {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.message {
+    margin: 0.5rem;
+    padding-top: 10%;
+    padding-bottom: 3%;
+    color: #f6f0f0;
+    font-size: 35px;
+    font-style: oblique;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.authenticate {
+    justify-content: center;
+    text-align: center;
+    color: #635c5c;
+}

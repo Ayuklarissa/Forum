@@ -1,0 +1,101 @@
+h2 {
+  display: flex;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
+#sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.message {
+  /* border: 1px solid; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.border {
+  border: 0.5px solid rgb(24, 53, 66);
+}
+
+.informations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.main {
+  width: 80%;
+  margin: auto;
+  background-color: beige;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.message img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  object-position: top;;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#Groupe img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid white;
+  border-radius: 8px;
+  background-color: #ffe1bf;
+  transform: rotateZ(-3deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.formulaire {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;;
+}
+
+.question img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  object-position: top;;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.Back-bottun {
+  background-color: rgb(138, 204, 214);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+.Return-button {
+  background-color: rgb(232, 168, 125);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}

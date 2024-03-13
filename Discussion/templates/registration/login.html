@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "Discussion/login.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section class="login-page">
+
+  <form method="post">
+    <div>
+      <h2>WELCOME</h2>
+    </div>
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Log In</button>
+  </form>
+{% endblock %}

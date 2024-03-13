@@ -1,0 +1,100 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+MON SITE D'EMPLOI 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "emploi/home.css" %}"/>
+  <style>
+    body {
+      background-image: url('https://img.freepik.com/photos-premium/jeune-homme-affaires-utilisation-tablette-numerique-dans-bureau_52137-29336.jpg?w=740');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+
+<div id="Site">
+  <div class="title">
+    <div class="app" >
+      <h1> JOBBIA </h1>
+      <h3>| Cameroun</h3>
+    </div>
+
+    <div class = 'access'>
+    {% if user is authenticated %}
+      <div >
+        <form action="{% url 'deconnection' %}" method="post">
+          {% csrf_token %}
+          <div class="disconnect">
+            <div><p><a href="{% url 'password_change' %}">Password Change</a></p></div>
+            <button class="logout-buttun">Log Out</button></a>
+          </div>
+        </form>
+      </div>
+      {% else %}
+        <div class="connect">
+          <div class="inscription"><a href="{% url 'inscription' %}">S'inscrire</a> </div>
+          <div class="connection"><a href="{% url 'connection' %}">Se connecter</a> </div>
+        </div>
+        <div class="reset"><p><a href="{% url 'password_reset' %}">Password Reset</a></p></div>
+      {% endif %}
+    </div> 
+  </div>
+</div>
+<div class='post'>
+  <div>
+    <div class='message'>
+      Trouver votre futur emploi au Cameroun selon votre convenance!
+    </div>
+    <div class="user">
+      <div class="candidat"><h3>CANDIDAT: POSTULER POUR UN EMPLOI</h3></div>
+      <div class="recruteur"><a href="{% url 'annonce' %}"><h3>RECRUTEUR: PUBLIER UNE ANNONCE</h3></a></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="authenticate">
+    {% if user.is_authenticated %}
+      <h2>Welcome {{ user.username }}!</h2>
+    {% else %}
+      <p>You are not logged in.</p><br/>
+      <p>Please log in or register yourself</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="Rubrique">
+  <div class="offres">
+    {% for x in post %}
+    <div class='post'>
+      <div class='entreprise'>
+        <h3>{{x.entreprise_name}}</h3>
+      </div>
+      <div class='info'>
+        Publie par {{x.user}}
+      </div>
+      <div class="date">
+        le {{x.pub_date}}
+      </div>
+      <div class="poste">
+        Pour le poste de {{x.poste}}
+      </div>
+      <div class="button">
+        <a href="{% url 'offre_emploi' x.id %}">
+          <button class='see-button'>Voir l'offre</button>
+        </a>
+      </div>
+    </div>
+    <hr/>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock%}

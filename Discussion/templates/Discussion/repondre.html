@@ -1,0 +1,90 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+   Contenu
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "Discussion/repondre.css" %}" />
+{% endblock %}
+
+
+{% block content %}
+<div>
+    <div>
+        <a href="{% url 'question' group.id %}">
+            <button class="Return-button">
+                Retour
+            </button>
+        </a> 
+    </div>
+
+    <div >
+    <h2>Contenu</h2>
+    </div>
+</div>
+
+<section class="main">
+
+    <div class="question">
+        <img src="{% static "Discussion/images/usericon.png"%}" alt="usericone" /> 
+        <span> 
+            postée par {{question.member}}
+            <h4>{{question}}</h4>
+        </span>
+    </div>
+    <div class="info">
+        nombre de vues = {{question.views }}
+        | publié le {{question.pub_date}}
+    </div>
+    
+    <hr/>
+    
+    <ul>
+    {% for m in messages %}
+    <div class="message">
+        <div class="icon">
+        <img src="{% static "Discussion/images/usericon.png"%}" alt="usericone" /> 
+        <span> {{m.member}} </span>
+        </div>
+        <div class="reponses">
+            <h4>{{m.message_text}}</h4>
+        </div>
+        <div class="informations">
+            <div class="sender">
+            views = {{m.views}} |
+            published on {{m.pub_date}}
+            </div>
+        </div>
+    </div>
+    <hr/>
+{% endfor %}
+</section>
+    
+<section class="formulaire">
+    
+    <form action="{%  url 'respond_to_question' question.pk %}" method="POST"> 
+        {% csrf_token %}
+        <input type='hidden' name='sujet' value='{{question.pk}}' /> 
+        <input type='hidden' name='groupe' value='{{group.pk}}' /> 
+        <div>
+
+            <div>
+                <span>Votre Reponse</span>
+                <textarea required name="message_text" placeholder="Saisissez Votre message"></textarea>
+            </div>
+            
+            <div>
+                {% if user.is_authenticated %}
+                    <button type="submit">Envoyer</button>
+                {% else %}
+                    You are not eligible to reply to this message. Click <a href=""> here </a> to learn more!
+                {% endif %}
+            </div>
+        </div> 
+    </form>
+                
+
+</section>
+{% endblock %}

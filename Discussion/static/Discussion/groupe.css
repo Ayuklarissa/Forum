@@ -1,0 +1,103 @@
+html {
+  background-color: #bfd6ee;
+}
+
+#Forum {
+  background-color: #4479b3;
+  text-align: center;
+  margin-top: 20px;
+  padding: 4rem 8%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+
+
+}
+
+h1 {
+  color: #333;
+  font-size: 32px;
+}
+
+.Quit-buttun {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.Join-buttun {
+  background-color: #cfa6c6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+h2 {
+  display: flex;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
+#sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.border {
+  border: 0.5px solid rgb(24, 53, 66);
+}
+
+.informations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description_groups{
+  font-size: 18px;
+}
+
+.description {
+  font-size: 14px;
+
+}
+
+.Rubrique {
+  background-color: white;
+  padding: 3rem;
+  width: 100rem;
+  margin: -3rem auto 2rem auto;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+}
+
+.main {
+  width: 70%;
+  margin: auto;
+  background-color: rgb(171, 204, 212);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+

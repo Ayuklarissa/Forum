@@ -1,0 +1,44 @@
+.title {
+    background-color: rgb(232, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+  
+  }
+  
+  
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .message {
+    margin: 0.5rem;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    color: #413e3e;
+    font-size: 25px;
+    font-style: oblique;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.back-buttun {
+    background-color: blanchedalmond;
+    color: #0d0d0d;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    float: right;
+    
+}

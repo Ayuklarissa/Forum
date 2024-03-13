@@ -5,3 +5,4 @@ from .models import *
 admin.site.register(Group)
 admin.site.register(Message)
 admin.site.register(Member)
+admin.site.register(MemberShip)

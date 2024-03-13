@@ -1,0 +1,50 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+ANNONCES 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "emploi/annonce.css" %}"/>
+  <style>
+    body {
+    background-image: url("https://as1.ftcdn.net/v2/jpg/05/75/21/90/1000_F_575219024_6I7MV0kJZxDxu6iwmMNF0xcvMXYKDJTh.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+
+<div id="Site">
+    <div class="title">
+        <div class="app" >
+            <h1> JOBBIA </h1>
+            <h3>| Cameroun</h3>
+        </div>
+  
+        <div class = 'access'>
+            <a href="{% url 'home' %}">
+                <button class="cancel-buttun">Annuler</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<section id='annonce'>
+    
+    
+    <div class="formulaire">
+        <form method="POST">
+            <h1>Nouvelle offre?</h1>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Publier</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

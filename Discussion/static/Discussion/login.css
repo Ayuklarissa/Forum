@@ -1,0 +1,40 @@
+h2 {
+    color: #aa7501;
+    font-size: 24px;
+    margin-bottom: 20px;
+    /* text-decoration: underline; */
+    
+  }
+  
+  form {
+    width: 500px;
+    margin: 0 auto;
+    border: 3px solid rgb(168, 124, 1);
+    background-color: rgb(235, 222, 165);
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    align-self: auto;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  form button {
+    background-color: #e77307;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: rgb(235, 222, 165);
+  }
+  

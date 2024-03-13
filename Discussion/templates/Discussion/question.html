@@ -1,0 +1,63 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+   Discussion
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "Discussion/question.css" %}" />
+{% endblock %}
+
+
+{% block content %}
+
+<div id="Groupe">
+  <div> 
+    <img src="{% static "Discussion/images/grp-image.jpeg" %}" alt="grp-image" />
+    <span>
+      <h1>{{group.name}}</h1>
+      <h3>{{group.description}}</h3>
+    </span>
+  </div>
+  <div><a href="{% url 'groupe' %}"><button class="Quit-bottun">Quitter le Groupe</button></a> </div>
+  <div>
+      <a href="{% url 'liste' group.id  %}">
+        <button class="view-button">Liste Membres</button>
+      </a>
+  </div> 
+</div>
+<div>
+  <h2>Discussion</h2>
+</div>
+<section class="main">
+  {% for m in groupe_messages %}
+  <div class="message">
+    <div class="icon">
+      <img src="{% static "Discussion/images/usericon.png" %}" alt="usericone" /> 
+      <span> {{m.member}} </span>
+    </div>
+    <div class="messages" >
+      <h4>{{m.message_text}}</h4>
+    </div>
+    <div class="informations">
+        <div class="sender">
+          views = {{m.views}} |
+          published on {{m.pub_date}}
+        </div>
+        <div>
+          {% if user.is_authenticated %}
+            <a href="{% url 'repondre' group.id  m.id %}">
+              <button class="Response-bottun">Repondre</button>
+            </a>
+          {% else %}
+            You are not a member of this group. Click<a href="">here</a> to sign in!
+          {% endif %}
+        </div>
+    </div>
+
+  </div>
+  <hr/>
+  {% endfor %}
+</section>
+{% endblock %}

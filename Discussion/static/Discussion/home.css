@@ -1,0 +1,142 @@
+html {
+  background-color: #bfd6ee;
+}
+
+#Forum {
+  background-color: #4479b3;
+  text-align: center;
+  margin-top: 20px;
+  padding: 4rem 8%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+
+
+}
+
+h1 {
+  color: #333;
+  font-size: 32px;
+}
+
+.logout-buttun {
+  background-color: red;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Inscription-buttun {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-buttun {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.view-buttun {
+  background-color: #646e41;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+h2 {
+  display: flex;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
+#sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.message {
+  /* border: 1px solid; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.border {
+  border: 0.5px solid rgb(24, 53, 66);
+}
+
+.informations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message_text{
+  font-size: 18px;
+}
+
+.date {
+  font-size: 14px;
+
+}
+
+.Rubrique {
+  background-color: #bfd6ee;
+  padding: 3rem;
+  width: 80%;
+  margin: -3rem auto 2rem auto;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+  background-color: beige;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.authenticate {
+  background-color: rgb(160, 220, 209);
+  padding: 1rem;
+  width: 50rem;
+  margin: -3rem auto 2rem auto;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+}
+

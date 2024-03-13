@@ -1,0 +1,53 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+CANDIDATURE 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "emploi/candidature.css" %}"/>
+  <style>
+    body {
+    background-image: url("https://img.freepik.com/photos-gratuite/bouchent-main-tenant-carte-credit_23-2149241374.jpg?w=740&t=st=1710256298~exp=1710256898~hmac=fafa73021a3b115e4c4b2d61751c1b1d16828e5b78ce9e851751b3eec88454d5");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+
+<div id="Site">
+    <div class="title">
+        <div class="app" >
+            <h1> JOBBIA </h1>
+            <h3>| Cameroun</h3>
+        </div>
+  
+        <div class = 'access'>
+            <a href="{% url 'home' %}">
+                <button class="cancel-buttun">Annuler</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<section id="application">
+    <h1>Postuler pour cet Emploi</h1>
+    <div class="formulaire">
+        <h2>{{ post.entreprise_name }}</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% comment %} <div class="form-group">
+                <label for = "{{ form.cv.id_for_label }}">CV</label>
+                {{ form.cv }} 
+            </div> {% endcomment %}
+            <button type="submit">Soumettre</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

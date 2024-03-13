@@ -1,0 +1,106 @@
+#Forum {
+    background-color: rgb(226, 220, 181);
+    text-align: center;
+    margin-top: 50px;
+    padding: 2rem 5%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 32px;
+  }
+  
+  .Return-buttun {
+    background-color: #b18d4c;
+    color: #805075;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .Add-buttun {
+    background-color: #eaf3f3;
+    color: #805075;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    display: block;
+  }
+  
+  h3 {
+    display: flex;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  
+  
+  #sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding: 0,5%;
+  }
+  
+  .border {
+    border: 0.5px solid rgb(24, 53, 66);
+  }
+  
+  .main {
+    width: 90%;
+    margin: auto;
+    background-color: rgb(215, 211, 187);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+
+  .Members img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    object-position: top;;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .group img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid white;
+    border-radius: 8px;
+    background-color: #ffe1bf;
+    transform: rotateZ(-3deg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .icon img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    float: right;
+  }
+
+  .formulaire {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;;
+  }

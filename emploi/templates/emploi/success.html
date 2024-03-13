@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+RESPONSE-PAGE 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "emploi/success.css" %}"/>
+{% endblock %}
+
+{% block content %}
+
+<div id="Site">
+    <div class="title">
+        <div class="app" >
+            <h1> JOBBIA </h1>
+            <h3>| Cameroun</h3>
+        </div>
+    </div>
+</div>
+
+<div class='message'>
+    <h1>Votre candidature a été envoyée avec succès!!!</h1>
+    <a href="{% url 'home'  %}">
+        <h3>Voir d'autres offres<h3>
+    </a>
+</div>
+{% endblock %}

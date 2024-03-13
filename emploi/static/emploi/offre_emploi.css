@@ -1,0 +1,98 @@
+.title {
+    background-color: rgb(232, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+
+}
+
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Rubrique {
+    background-image: url("https://img.freepik.com/photos-premium/gestionnaire-homme-affaires-refusant-recevoir-argent_45041-163.jpg?w=740");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+
+h1 {
+    color: #ca1b1b;
+    font-size: 40px;
+    font-style: oblique;
+    text-align: center;
+  }
+
+.contenu {
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.offre_emploi {
+    width: 50%;
+    padding: 5%;
+    margin: auto;
+    background-color: rgb(150, 150, 150);
+    border-radius: 5px;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #f6f0f0;
+    font-size: 35px;
+    font-style: italic;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 2rem;
+    padding: 3%;
+}
+
+.post-button {
+    background-color: #f6f0f0;
+    color: #0d0d0d;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    float: right;
+}
+
+.date {
+    text-align: center;
+}
+
+.location {
+    text-align: center;
+}
+
+.back-buttun {
+    background-color: blanchedalmond;
+    color: #0d0d0d;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    float: right;
+    
+}
+

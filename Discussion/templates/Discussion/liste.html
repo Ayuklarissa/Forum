@@ -1,0 +1,95 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+    Membres
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "Discussion/liste.css" %}" />
+{% endblock %}
+
+{% block content %}
+<div id="Forum">
+  <div class="group">
+    <img src="{% static "Discussion/images/grp-image.jpeg" %}" alt="grp-image" />
+      <span>
+        <h1>{{groups.name}}</h1>
+        <h3>{{groups.description}}</h3>
+      </span>
+  </div>
+  <div><a href="{% url 'question' groups.id %}"><button class="Return-buttun">Return</button></a></div>
+  <div>
+    <a href="{% url 'not_member' groups.id %}">
+      <div class="icon">
+        <img src="{% static "Discussion/images/icon-ajout.webp" %}" alt="icon-ajout" />
+        <span>
+          Ajouter Membres
+        </span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div>
+  <h1>Members</h1>
+</div>
+<section class="main">
+  {% for x in group_member %}
+  <div class="Members">
+    <div>
+      <img src="{% static "Discussion/images/usericon.png" %}" alt="usericon" />
+      <span>
+        <h3>{{x.name}}</h3>
+      </span>
+    </div>
+    <div class="informations">
+      adresse mail : {{x.e_mail}} |
+      date d'inscription {{x.date_inscription}}
+    </div>
+    <div class="role">
+      role : {{x.role}}
+    </div>
+  </div>
+  <hr/>
+  {% endfor %}
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

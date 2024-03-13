@@ -1,0 +1,84 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+    Groupes
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "Discussion/groupe.css" %}" />
+{% endblock %}
+
+{% block content %}
+<div id="Forum">
+  <div> 
+    <h1>ALL-TECH FORUM</h1>
+  </div>
+  <div><a href="{% url 'home' %}"><button class="Quit-buttun">Quit</button></a> </div>
+</div>
+
+<div>
+  <h2>Groups Available</h2>
+</div>
+<section class="main">
+  {% for x in groups %}
+  <div class="Groupes">
+    <div class="name" >
+      <h3>{{x.name}}</h3>
+    </div>
+    <div class="informations">
+        <div class="description_groups">
+          devise : {{x.topic}} |
+          créé le {{x.pub_date}}
+        <div class="description">
+          description : {{x.description}}
+        </div>
+        <div>
+          <a href="{% url 'question' x.id %}">
+            <button class="Join-buttun">Rejoindre</button>
+          </a>
+        </div>
+    </div>
+  </div>
+  <hr/>
+  {% endfor %}
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

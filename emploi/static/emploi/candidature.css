@@ -1,0 +1,78 @@
+.title {
+  background-color: rgb(232, 224, 224);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+
+}
+
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulaire {
+    background-color: rgb(155, 155, 155);
+    width: 40%;
+    padding: 5%;
+    margin: auto;
+}
+
+h1 {
+    color: #ca1b1b;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+  }
+
+form button {
+    background-color: #ded3d3;
+    color: #0d0d0d;
+    padding: 8px 12px;
+    border: solid;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    float: right;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+      width: 70%;
+      padding: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    h2 {
+        color: #f6f0f0;
+        font-size: 35px;
+        font-style: italic;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 0.5rem;
+        padding: 1%;
+    }
+
+    .cancel-buttun {
+      background-color: blanchedalmond;
+      color: #0d0d0d;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+      float: right;
+      
+  }

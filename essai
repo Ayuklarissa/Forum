@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width = device-width, initial-scale=1.0">
+        <title>Mon Forum</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <nav class="navigation">
+                    <ul class="nav-list">
+                        <li class="nav-items">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#">Groupes</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#">Details</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class = "groups">
+                <div class="groups-title">
+                    <h1>General informations</h1>
+                </div>
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>
+                
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>
+
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class = "groups">
+                <div class="groups-title">
+                    <h1>General informations</h1>
+                </div>
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>
+                
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>
+
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class = "groups">
+                <div class="groups-title">
+                    <h1>General informations</h1>
+                </div>
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>    
+
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>
+
+                <div class="groups-row">
+                    <div class="groups-icon">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <div class="groups-description">
+                        <h1><a href=""Description title:></a></h1>
+                        <p>Description Content:</p>
+                    </div>
+                    <div class="groups-stats">
+                        <span>34 posts| 24 topics</span>
+                    </div>
+                    <div class="groups-info">
+                        <b><a href = "">Last Post </a></b>by Larissa
+                        <br>
+                        on <small> febuary 2024 </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="main.js">
+
+        </script>
+    </body>
+</html>
+
+
+
+
+css
+
+/* global */
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: rgb(0, 0. 0);
+    color: azure;
+}
+
+a{
+    color: #FF0042;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.groups{
+    margin-top: 20px;
+}
+
+.groups-title{
+    background-color: #292B2E;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+
+.groups-description *{
+    margin-block: 0;
+}
+.groups-row{
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.groups-column{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #111314;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.groups-icon{
+    font-size: 45px;   
+}
+
+/* for smartphones*/
+@media screen and (max-width:460) {
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .groups-row{
+        display: grid;
+        grid-template-columns: 25% 70% ;
+        grid-template-rows: 65% 35%;
+    }
+
+}
+
+/* for tablets */
+@media screen and (min-width: 460px) and (max-width:1024px){
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }    
+
+    .groups-row{
+        display: grid;
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+
+    .groups-icon{
+        font-size: 35px;
+    }
+
+    html{
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 18px;
+    }
+}
+
+/* navbar */
+
+header{
+    margin-inline: 10px;
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+}
+
+.navigation{
+    background-color: #52057b;
+    padding: 10px;
+    width: 65px;
+    display: inline-block;
+    border-radius: 5px;
+    max-height: 80px;
+    margin-right: 10px;
+}

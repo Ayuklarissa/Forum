@@ -1,0 +1,82 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+OFFRE D'EMPLOI 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "emploi/offre_emploi.css" %}"/>
+  <style>
+    body {
+    background-image: url("https://img.freepik.com/photos-premium/gestionnaire-homme-affaires-refusant-recevoir-argent_45041-163.jpg?w=740");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="Site">
+    <div class="title">
+        <div class="app" >
+            <h1> JOBBIA </h1>
+            <h3>| Cameroun</h3>
+        </div>
+  
+        <div class = 'access'>
+            <a href="{% url 'home' %}">
+                <button class="back-buttun">Return</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<section id='offre'>
+    <div class='Rubrique'>
+        <h1>NOUS RECRUTONS!</h1>
+        <div class="offre_emploi">
+            <div class="contenu">
+                <div class="entreprise">
+                    <h2>{{ post.entreprise_name }}</h2>
+                </div>
+                <div class="location">
+                    Notre entreprise est située à <h4>{{ post.location }}<h4>
+                </div>
+                <div class="description">
+                    <h3>Description:</h3>{{ post.description_entreprise }}
+                </div>
+                <div class="mission">
+                    <h3>Mission:</h3>{{ post.mission }}
+                </div>
+                <div class="poste">
+                    <h3>Poste disponible:</h3> {{post.poste }} 
+                </div>
+            <hr/>
+            </div>
+            
+            <div class="exigeance">
+                <div class="profil">
+                    <h3>PROFILS RECHERCHES:</h3>
+                <p> {{ post.require_profil}}</p>
+                </div>
+                <hr/>
+                <div class="date">
+                    Publié par {{ post.user}} |
+                    Le {{ post.pub_date }}
+                </div>
+            </div>
+            <hr/>
+            <div>
+                <a href="{% url 'candidature' post.id  %}">
+                    <button class='post-button'>Postuler</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
