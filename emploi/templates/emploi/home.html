@@ -27,14 +27,12 @@ MON SITE D'EMPLOI
     </div>
 
     <div class = 'access'>
-    {% if user is authenticated %}
+      {% if user.is_authenticated %}
       <div >
-        <form action="{% url 'deconnection' %}" method="post">
+        <form action="{% url 'logout' %}" method="post">
           {% csrf_token %}
-          <div class="disconnect">
-            <div><p><a href="{% url 'password_change' %}">Password Change</a></p></div>
-            <button class="logout-buttun">Log Out</button></a>
-          </div>
+          <button class="logout-buttun">Log Out</button></a>
+          <div><p><a href="{% url 'password_change' %}">Password Change</a></p></div>
         </form>
       </div>
       {% else %}

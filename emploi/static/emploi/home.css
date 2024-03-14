@@ -100,8 +100,8 @@ h1 {
 }
 
 .logout-buttun {
-    background-color: rgb(237, 65, 17);
-    color: #0d0d0d;
+    background-color: rgb(16, 16, 16);
+    color: #ea0808;
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
@@ -180,4 +180,9 @@ h1 {
     justify-content: center;
     text-align: center;
     color: #635c5c;
+}
+
+form a {
+    color: #635c5c;
+    
 }

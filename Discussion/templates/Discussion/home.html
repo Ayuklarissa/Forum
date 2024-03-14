@@ -22,7 +22,7 @@ My Forum Discussion
       <form action="{% url 'logout' %}" method="post">
         {% csrf_token %}
         <div><p><a href="{% url 'password_change' %}">Password Change</a></p></div>
-        <button class="logout-buttun">Log Out</button></a>
+        <button class="logout-buttun">Se deconnecter</button></a>
       </form>
     </div>
     {% else %}

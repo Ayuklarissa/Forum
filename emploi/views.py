@@ -5,10 +5,12 @@ from .forms import *
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth import authenticate, login, logout
-from .forms import LoginForm
-from django.views.generic import ListView
-from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from .forms import LoginForm
+from django.views.generic import ListView, DetailView, CreateView, View
+from django.views.generic.edit import FormView
+from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Create your views here.
@@ -20,42 +22,42 @@ class HomeView (ListView):
 
 
 
-def Inscription(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            member = form.save(commit=False)
-            member.user = request.user
-            member.save()
-            return redirect('home')  # Redirige vers une autre page après l'inscription réussie
-    else:
-        form = SignUpForm()
+class InscriptionView(FormView):
+    template_name = 'registration/inscription.html'
+    form_class = SignUpForm
+
+    def form_valid(self, form):
+        member = form.save(commit=False)
+        member.user = self.request.user
+        member.save()
+        return redirect('home')
     
-    return render(request, 'registration/inscription.html', {'form': form})
+    def get(self, request, *args, **kwargs):
+        form = self.get_form()
+        return self.render_to_response(self.get_context_data(form=form))
 
 
-def offre_emploi(request, pk):
-    post = OffreEmploi.objects.get(id=pk)
-    return render (request, 'emploi/offre_emploi.html', {'post':post,})
+class OffreEmploiDetailView(DetailView):
+    model = OffreEmploi
+    template_name = 'emploi/offre_emploi.html'
+    context_object_name = 'post'
 
 
 
-def candidature(request, pk):
-    post = OffreEmploi.objects.get(id=pk)
+class CandidatureCreateView(CreateView):
+    model = Candidature
+    # form_class = CandidatureForm
+    template_name = 'emploi/candidature.html'
+    fields = ['nom', 'prenom', 'e_mail', 'cv', 'lettre_motivation']
 
-    if request.method == 'POST':
-        form = CandidatureForm(request.POST, request.FILES)
-        if form.is_valid():
-            application = form.save(commit=False)
-            application.offre_emploi = post
-            application.pub_date = timezone.now()
-            application.user = request.user
-            application.save()
-            print('sa marche')
-            return redirect(reverse('success', kwargs={'pk': pk} ))
-    else:
-        form = CandidatureForm(initial={'offre_emploi': post})
-    return render(request, 'emploi/candidature.html', {'form': form, 'post': post})
+    def form_valid(self, form):
+        post = OffreEmploi.objects.get(id=self.kwargs['pk'])
+        application = form.save(commit=False)
+        application.offre_emploi = post
+        application.pub_date = timezone.now()
+        application.user = self.request.user
+        application.save()
+        return redirect('success', pk=self.kwargs['pk'])
 
 
 
@@ -65,40 +67,43 @@ class SuccessView(generic.TemplateView):
     template_name = 'emploi/success.html'
 
 
-@login_required
-def annonce(request):
-    if request.method == 'POST':
-        form = AnnonceForm(request.POST)
-        if form.is_valid():
-            offre = form.save()
-            offre.user = request.user
-            offre.pub_date = timezone.now()
-            offre.save()
-            print('sa marche')
-            return redirect(reverse('home'))
-    else:
-        form = AnnonceForm()
-    return render(request, 'emploi/annonce.html', {'form':form})
+
+
+class AnnonceFormView(LoginRequiredMixin,FormView):
+    model = OffreEmploi
+    form_class = AnnonceForm
+    template_name = 'emploi/annonce.html'
+    success_url = reverse_lazy('home')
+
+    def form_valid(self,form):
+        offre = form.save()
+        offre.user = self.request.user
+        offre.pub_date = timezone.now()
+        offre.save()
+        return redirect(reverse('home'))
 
 
 
-# login page
-def connection(request):
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user = authenticate(request, username=username, password=password)
-            if user:
-                login(request, user)    
-                return redirect('home')
-    else:
-        form = LoginForm()
-    return render(request, 'registration/connection.html', {'form': form})
+class ConnectionFormView(FormView):
+    form_class = LoginForm
+    template_name = 'registration/connection.html'
+
+    def form_valid(self, form):
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        user = authenticate(username=username, password=password)
+        if user:
+            login(self.request, user)    
+            return redirect('home')
+        return super().form_valid(form)
+    
+    #Methode pour gerer la requete GET et initialiser le formulaire
+    def get(self, request, *args, **kwargs):
+        form = self.get_form()
+        return self.render_to_response(self.get_context_data(form=form))
 
 
-# logout page
-def deconnection(request):
-    logout(request)
-    return redirect('connection')
+class DeconnectionView(View):
+    def get(self, request, *args, **kwargs):
+        logout(request)
+        return redirect('connection')
